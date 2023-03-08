@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: installing maven
+      action: yum name=maven state=present
